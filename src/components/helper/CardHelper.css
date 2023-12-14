@@ -23,6 +23,15 @@
   :root {
     --h2-font-size: 1.5rem;
     --small-font-size: 0.875rem;
+    --body-font-size: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  :root {
+    --h2-font-size: 1rem;
+    --small-font-size: 0.7rem;
+    --body-font-size: 0rem;
   }
 }
 
@@ -41,7 +50,7 @@ body {
 
 img {
   display: block;
-  max-width: 100%;
+  max-width: 80vw;
   height: auto;
 }
 
@@ -50,7 +59,7 @@ img {
   display: grid;
   place-items: center;
   margin-inline: 1.5rem;
-  padding-block: 5rem;
+  padding-block: 1rem;
 }
 
 .card_container {
@@ -64,7 +73,7 @@ img {
 }
 
 .card_img {
-  width: 328px;
+  width: 40vw;
   border-radius: 1.5rem;
 }
 
@@ -85,7 +94,7 @@ img {
 
 .card_description {
   display: block;
-  font-size: var(--small-font-size);
+  font-size: var(--body-font-size);
   margin-bottom: 0.25rem;
 }
 
@@ -165,38 +174,48 @@ img {
 }
 
 /*=============== BREAKPOINTS ===============*/
+@media screen and (max-aspect-ratio: 1/2) {
+  .card_description {
+    font-size: 0rem;
+  }
+  .card_data {
+    max-width: 55vw;
+  }
+}
+
 /* For small devices */
-@media screen and (max-width: 340px) {
+@media screen and (max-aspect-ratio: 7/8) {
   .container {
     margin-inline: 1rem;
   }
 
-  .card_data {
-    width: 250px;
-    padding: 1rem;
+  .card_img {
+    height: 40vh;
+    width: auto;
   }
-}
 
-/* For medium devices */
-@media screen and (min-width: 768px) {
-  .card_container {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 8vw;
+  .card_data {
+    width: 256px;
+    padding: 1rem;
+    box-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.15);
   }
 }
 
 /* For large devices */
-@media screen and (min-width: 1120px) {
+@media screen and (min-aspect-ratio: 7/8) {
   .container {
     height: 100vh;
   }
 
   .card_container {
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 8vw;
   }
+
   .card_img {
     width: 348px;
   }
+
   .card_data {
     width: 316px;
     padding-inline: 2.5rem;

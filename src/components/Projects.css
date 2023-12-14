@@ -12,7 +12,8 @@ body {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 50vw;
+  max-width: 80%;
   height: auto;
 }
 
@@ -33,5 +34,6 @@ img {
   font-family: "p22-nudgewink-pro", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 4rem;
+  font-size: 8vmin;
+  padding-bottom: 10px;
 }

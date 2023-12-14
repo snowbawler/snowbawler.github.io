@@ -9,7 +9,7 @@ const CardHelper = (props) => {
                 <img className='card_img' src={image} alt="" />
             </a>
             <div className="card_data">
-                <span className="card_discription">{description}</span>
+                <span className="card_description">{description}</span>
                 <h2 className="card_title">{title}</h2>
                 <a href={link} className='card_button'>Read More</a>
             </div>

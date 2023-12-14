@@ -1,0 +1,37 @@
+@import url("https://use.typekit.net/lnf3shp.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  display: grid;
+  place-items: center;
+  margin-inline: 1.5rem;
+  padding-block: 5rem;
+}
+
+.title {
+  color: black;
+  font-family: "p22-nudgewink-pro", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 4rem;
+}

@@ -1,0 +1,18 @@
+:root {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vmax;
+  height: auto;
+  margin-bottom: -5%;
+}
+
+.lottie-container {
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+}

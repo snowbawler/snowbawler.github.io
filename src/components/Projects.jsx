@@ -1,7 +1,7 @@
 import './Projects.css'
 import CardHelper from './helper/CardHelper'
-import imageA from '/public/duck.svg'
-import imageB from '/public/duck.svg'
+import imageA from '../assets/duck.svg'
+import imageB from '../assets/duck.svg'
 
 export default function Projects() {
   const descriptionA = 'A carpooling app for UT\'s rock climbing team'

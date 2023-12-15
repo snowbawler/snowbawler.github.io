@@ -30,7 +30,7 @@ img {
 }
 
 .title {
-  color: black;
+  color: rgba(0, 0, 0, 0.671);
   font-family: "p22-nudgewink-pro", sans-serif;
   font-weight: 700;
   font-style: normal;

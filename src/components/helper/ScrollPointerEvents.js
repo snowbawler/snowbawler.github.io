@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const pinSpacer = document.querySelector('.pin-spacer');
 
     // Check if the scroll percentage is at the bottom (adjust the threshold as needed)
-    if (scrollPercentage === 100) {
+    if (scrollPercentage >= 95) {
       pinSpacer.style.pointerEvents = 'none';
     } else {
       pinSpacer.style.pointerEvents = 'auto';

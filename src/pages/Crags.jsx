@@ -1,5 +1,12 @@
-export const Crags = () => {
+import React from "react"
+import { useNavigate } from "react-router-dom"
+
+export default function Crags() {
+    const navigate = useNavigate();
     return(
-        <h1>Placeholder</h1>
+        <>
+            <h1>Placeholder</h1>
+            <button onClick={() => navigate(-1)}>back</button>
+        </>
     )
 }

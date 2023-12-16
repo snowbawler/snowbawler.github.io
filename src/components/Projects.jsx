@@ -17,13 +17,13 @@ export default function Projects() {
           description={descriptionA}
           title={titleA}
           image={imageA}
-          link={'/Crags'}
+          link={'Crags'}
         />
         <CardHelper
           description={descriptionB}
           title={titleB}
           image={imageB}
-          link={'/PlaceHolder'}
+          link={'PlaceHolder'}
         />
       </div>
       <div className='links'>links</div>

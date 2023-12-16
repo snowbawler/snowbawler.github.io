@@ -1,6 +1,5 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
-import transition from "../components/helper/transition";
 
 const Crags = () => {
     const navigate = useNavigate();
@@ -12,4 +11,4 @@ const Crags = () => {
     )
 }
 
-export default transition(Crags)
+export default Crags

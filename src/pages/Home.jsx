@@ -2,6 +2,7 @@ import React from "react"
 import Projects from "../components/Projects"
 import Scroll from "../components/Scroll.jsx"
 import '../index.css'
+import transition from "../components/helper/transition.jsx"
 
 const Home = () => {
     return(
@@ -12,4 +13,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default transition(Home)

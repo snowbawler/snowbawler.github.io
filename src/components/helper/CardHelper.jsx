@@ -1,17 +1,18 @@
 import './CardHelper.css'
+import { Link } from 'react-router-dom';
 
 const CardHelper = (props) => {
     const {description, title, image, link} = props;
 
     return (
         <article className="card_article">
-            <a href={link}>
+            <Link to={link}>
                 <img className='card_img' src={image} alt="" />
-            </a>
+            </Link>
             <div className="card_data">
                 <span className="card_description">{description}</span>
                 <h2 className="card_title">{title}</h2>
-                <a href={link} className='card_button'>Read More</a>
+                <Link to={link} className='card_button'>Read More</Link>
             </div>
         </article>
     )

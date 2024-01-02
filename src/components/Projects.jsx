@@ -26,7 +26,9 @@ export default function Projects() {
           link={'PlaceHolder'}
         />
       </div>
-      <div className='links'>links</div>
+      <div className='links'>
+        <img src="" alt="" />
+      </div>
     </div>
   )
 }

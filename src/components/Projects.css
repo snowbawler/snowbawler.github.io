@@ -37,3 +37,14 @@ img {
   font-size: 8vmin;
   padding-bottom: 10px;
 }
+
+.links {
+  text-align: center;
+}
+
+.link {
+  width: 35px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+}

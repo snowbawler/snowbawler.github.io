@@ -1,5 +1,8 @@
 import './Projects.css'
 import CardHelper from './helper/CardHelper'
+import gitHubIcon from '../assets/github-mark.png'
+import resume from '../assets/resume.svg'
+import linkedin from '../assets/LI-In-Bug.png'
 import imageA from '../assets/duck.svg'
 import imageB from '../assets/duck.svg'
 
@@ -27,7 +30,15 @@ export default function Projects() {
         />
       </div>
       <div className='links'>
-        <img src="" alt="" />
+        <a href="https://github.com/snowbawler" target='_blank'>
+          <img className='link' src={gitHubIcon} alt="GitHub" />
+        </a>
+        <a href="https://github.com/snowbawler" target='_blank'>
+          <img className='link' src={resume} alt="Resume" />
+        </a>
+        <a href="https://linkedin.com/in/donne-su" target='_blank'>
+          <img className='link' src={linkedin} alt="LinkedIn" />
+        </a>
       </div>
     </div>
   )

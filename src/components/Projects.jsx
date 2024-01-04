@@ -5,6 +5,7 @@ import resume from '../assets/resume.svg'
 import linkedin from '../assets/LI-In-Bug.png'
 import imageA from '../assets/duck.svg'
 import imageB from '../assets/duck.svg'
+import resumePDF from '../assets/resume.pdf'
 
 export default function Projects() {
   const descriptionA = 'A carpooling app for UT\'s rock climbing team'
@@ -33,7 +34,7 @@ export default function Projects() {
         <a href="https://github.com/snowbawler" target='_blank'>
           <img className='link' src={gitHubIcon} alt="GitHub" />
         </a>
-        <a href="src\assets\resume.pdf" target='_blank'>
+        <a href={resumePDF} target='_blank'>
           <img className='link' src={resume} alt="Resume" />
         </a>
         <a href="https://linkedin.com/in/donne-su" target='_blank'>

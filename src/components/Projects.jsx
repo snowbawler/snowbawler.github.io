@@ -33,7 +33,7 @@ export default function Projects() {
         <a href="https://github.com/snowbawler" target='_blank'>
           <img className='link' src={gitHubIcon} alt="GitHub" />
         </a>
-        <a href="https://github.com/snowbawler" target='_blank'>
+        <a href="snowbawler.github.io/src/assets/resume.pdf" target='_blank'>
           <img className='link' src={resume} alt="Resume" />
         </a>
         <a href="https://linkedin.com/in/donne-su" target='_blank'>

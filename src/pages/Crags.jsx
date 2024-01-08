@@ -6,7 +6,7 @@ import CragCase from "../assets/CragCase.svg";
 const Crags = () => {
     return (
         <>
-            <img src={CragCase} style={{ position: 'absolute', maxWidth:'100vw', width: '100vw', height: 'auto', objectFit: 'contain' }} />
+            <img src={CragCase} style={{ position: 'relative', maxWidth:'100vw', width: '100vw', height: 'auto', objectFit: 'contain' }} />
             <Link preventScrollReset={true} to="/">Back</Link>
         </>
     );

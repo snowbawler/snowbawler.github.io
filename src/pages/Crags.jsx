@@ -1,14 +1,15 @@
-import React from "react"
-import { Link } from "react-router-dom"
+import React from "react";
+import { Link } from "react-router-dom";
 import transition from "../components/helper/transition";
+import CragCase from "../assets/CragCase.svg";
 
 const Crags = () => {
-    return(
+    return (
         <>
-            <h1>Placeholder</h1>
+            <img src={CragCase} style={{ position: 'absolute', maxWidth:'100vw', width: '100vw', height: 'auto', objectFit: 'contain' }} />
             <Link preventScrollReset={true} to="/">Back</Link>
         </>
-    )
-}
+    );
+};
 
-export default transition(Crags)
+export default transition(Crags);

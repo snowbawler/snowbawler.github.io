@@ -4,14 +4,14 @@ import gitHubIcon from '../assets/github-mark.png'
 import resume from '../assets/resume.svg'
 import linkedin from '../assets/LI-In-Bug.png'
 import imageA from '../assets/CragHero.svg'
-import imageB from '../assets/duck.svg'
+import imageB from '../assets/muckcardimg.png'
 import resumePDF from '../assets/resume.pdf'
 
 export default function Projects() {
   const descriptionA = 'A carpooling app for UT\'s rock climbing team'
   const titleA = 'Crags'
-  const descriptionB = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, deleniti?'
-  const titleB = 'Lorem Ipsum'
+  const descriptionB = '2D Platformer'
+  const titleB = 'Muck'
 
   return (
     <div className='container'>
@@ -27,7 +27,7 @@ export default function Projects() {
           description={descriptionB}
           title={titleB}
           image={imageB}
-          link={'PlaceHolder'}
+          link={'Muck'}
         />
       </div>
       <div className='links'>

@@ -4,7 +4,7 @@ import './App.css'
 
 import Home from "./pages/Home";
 import Crags from "./pages/Crags";
-import PlaceHolder from "./pages/Page2";
+import Muck from "./pages/Muck";
 
 import { AnimatePresence } from "framer-motion";
 
@@ -18,7 +18,7 @@ function App() {
                 <Routes location={location} key={location.pathname}>
                     <Route index element={<Home/>} />
                     <Route path='/Crags' element={<Crags/>}/>
-                    <Route path='/PlaceHolder' element={<PlaceHolder/>}/>
+                    <Route path='/PlaceHolder' element={<Muck/>}/>
                     <Route path='*' element={<Home/>} />
                 </Routes>
             </AnimatePresence>

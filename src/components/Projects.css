@@ -7,14 +7,16 @@
 }
 
 body {
-  background-color: rgb(255, 255, 255);
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
 }
 
 img {
   display: block;
-  height: 50vw;
+  width: 50vw;
   max-width: 80%;
-  width: auto;
+  height: 50vw;
 }
 
 .container {

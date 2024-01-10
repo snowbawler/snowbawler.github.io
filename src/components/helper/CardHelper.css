@@ -42,12 +42,6 @@
   margin: 0;
 }
 
-body {
-  font-family: var(--body-font);
-  background-color: var(--body-color);
-  color: var(--text-color);
-}
-
 img {
   display: block;
   max-width: 80vw;
@@ -190,8 +184,8 @@ img {
   }
 
   .card_img {
-    height: 40vh;
-    width: auto;
+    height: auto;
+    width: 40vh;
   }
 
   .card_data {

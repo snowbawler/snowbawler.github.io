@@ -18,7 +18,7 @@ function App() {
                 <Routes location={location} key={location.pathname}>
                     <Route index element={<Home/>} />
                     <Route path='/Crags' element={<Crags/>}/>
-                    <Route path='/PlaceHolder' element={<Muck/>}/>
+                    <Route path='/Muck' element={<Muck/>}/>
                     <Route path='*' element={<Home/>} />
                 </Routes>
             </AnimatePresence>

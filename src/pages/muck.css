@@ -1,0 +1,22 @@
+body {
+  background-color: #f2bb05;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  padding-top: 5vh;
+}
+
+.video {
+  width: 100%;
+  border-radius: 15px; /* Add rounded corners with a radius of 15px */
+  overflow: hidden;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  margin: 20px;
+}

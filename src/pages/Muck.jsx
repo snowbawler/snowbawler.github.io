@@ -36,6 +36,7 @@ const Muck = () => {
                 </a>
                 <img className="muckGP" src={GPB}></img>
             </div>
+            <div className="heading">Play!</div>
         </div>
     )
 }

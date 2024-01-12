@@ -29,14 +29,13 @@ const Muck = () => {
             <Link to="/" style={{position: "absolute", top: "20px", left: "20px", padding: "10px 15px", background: "#F8971F", color: "#fff",  textDecoration: "none", borderRadius: "5px",  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", fontSize: "16px",}}>Back</Link>
             <div className="heading">Project Roadmap</div>
             <img className="muckPlan" src={MuckPlan}></img>
-            <div className="heading">Ideate</div>
             <div className="muckGP-container">
                 <a href={pitchpdf}  target="_blank">
                     <img className="muckGP" src={pitch} alt="" />
                 </a>
                 <img className="muckGP" src={GPB}></img>
             </div>
-            <div className="heading">Play!</div>
+            <a className="heading" style={{paddingBottom:"10vh"}} href="https://snowbawler.itch.io/muck">Play!</a>
         </div>
     )
 }

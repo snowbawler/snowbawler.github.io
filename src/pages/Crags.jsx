@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import transition from "../components/helper/transition";
 import CragCase from "../assets/CragCase.svg";
 
 const Crags = () => {
@@ -21,4 +20,4 @@ const Crags = () => {
     );
 };
 
-export default transition(Crags);
+export default Crags;

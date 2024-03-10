@@ -1,7 +1,6 @@
 import React from "react"
 import { useEffect } from 'react';
 import { Link } from "react-router-dom"
-import transition from "../components/helper/transition";
 import ReactPlayer from 'react-player'
 import MuckTrailer from '../assets/MuckTrailer.mp4'
 import MuckPlan from '../assets/MuckPlan.svg'
@@ -40,4 +39,4 @@ const Muck = () => {
     )
 }
 
-export default transition(Muck)
+export default Muck

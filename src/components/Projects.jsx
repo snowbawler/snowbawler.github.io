@@ -31,7 +31,7 @@ export default function Projects() {
         />
       </div>
       <div className='links'>
-        <a href="https://github.com/snowbawler" target='_blank'>
+        <a href="https://github.com/snowbawler?tab=repositories" target='_blank'>
           <img className='link' src={gitHubIcon} alt="GitHub" />
         </a>
         <a href={resumePDF} target='_blank'>

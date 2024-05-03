@@ -27,7 +27,7 @@
   }
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-aspect-ratio: 7/8) {
   :root {
     --h2-font-size: 1rem;
     --small-font-size: 0.7rem;
@@ -183,15 +183,65 @@ img {
     margin-inline: 1rem;
   }
 
+  .card_container {
+    row-gap: 1.5vh;
+  }
+
   .card_img {
     height: auto;
-    width: 40vh;
+    width: 24vh;
   }
 
   .card_data {
-    width: 256px;
-    padding: 1rem;
+    width: 22vh;
+    padding: 0.5rem;
     box-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.15);
+  }
+
+  .card_title {
+    margin-bottom: 0rem;
+  }
+
+  .card_description {
+    font-size: 0rem;
+    margin-bottom: 0rem;
+  }
+
+  @keyframes show-data {
+    50% {
+      transform: translateY(-14rem);
+    }
+    100% {
+      transform: translateY(-14rem);
+    }
+  }
+
+  @keyframes remove-overflow {
+    to {
+      overflow: initial;
+    }
+  }
+
+  @keyframes remove-data {
+    0% {
+      transform: translateY(-14rem);
+    }
+    20% {
+      transform: translateY(-14rem);
+    }
+    100% {
+      transform: translateY(0.5rem);
+    }
+  }
+
+  @keyframes show-overflow {
+    0% {
+      overflow: initial;
+      pointer-events: none;
+    }
+    10% {
+      overflow: hidden;
+    }
   }
 }
 
@@ -202,16 +252,16 @@ img {
   }
 
   .card_container {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 8vw;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5vw;
   }
 
   .card_img {
-    width: 348px;
+    width: 25vw;
   }
 
   .card_data {
-    width: 316px;
+    width: 22.5vw;
     padding-inline: 2.5rem;
   }
 }

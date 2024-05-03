@@ -27,7 +27,7 @@ img {
   position: fixed;
   display: grid;
   place-items: center;
-  margin-inline: 1.5rem;
+  margin-inline: 1rem;
   padding-block: 5rem;
 }
 
@@ -37,7 +37,6 @@ img {
   font-weight: 700;
   font-style: normal;
   font-size: 8vmin;
-  padding-bottom: 10px;
 }
 
 .links {
@@ -45,8 +44,8 @@ img {
 }
 
 .link {
-  width: 35px;
+  width: 5vmin;
   display: inline-block;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 2vmin;
+  margin-right: 2vmin;
 }

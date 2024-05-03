@@ -8,7 +8,7 @@ import imageB from '../assets/muckcardimg.png'
 import resumePDF from '../assets/resume.pdf'
 
 export default function Projects() {
-  const descriptionA = 'A carpooling app for UT\'s rock climbing team'
+  const descriptionA = 'Texas Rock Climbing Member App'
   const titleA = 'Crags'
   const descriptionB = '2D Platformer'
   const titleB = 'Muck'

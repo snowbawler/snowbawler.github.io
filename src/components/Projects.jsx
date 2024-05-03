@@ -12,6 +12,8 @@ export default function Projects() {
   const titleA = 'Crags'
   const descriptionB = '2D Platformer'
   const titleB = 'Muck'
+  const descriptionC = 'Medical Billing Error Detection'
+  const titleC = 'BridgeBill'
 
   return (
     <div className='container'>
@@ -26,6 +28,12 @@ export default function Projects() {
         <CardHelper
           description={descriptionB}
           title={titleB}
+          image={imageB}
+          link={'Muck'}
+        />
+        <CardHelper
+          description={descriptionC}
+          title={titleC}
           image={imageB}
           link={'Muck'}
         />

@@ -2,7 +2,7 @@ import './CardHelper.css'
 import { Link } from 'react-router-dom';
 
 const CardHelper = (props) => {
-    const {description, title, image, link} = props;
+    const {title, link, description, image} = props;
 
     return (
         <article className="card_article">

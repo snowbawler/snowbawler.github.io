@@ -1,35 +1,28 @@
-import { NotionRenderer } from "react-notion";
+import React, { useEffect, useState } from 'react';
+import { NotionRenderer } from 'react-notion';
+import "react-notion/src/styles.css";
+import "./pages.css"
 
-import { getAllPosts } from '../components/Projects'
+const NOTION_PAGE_ID = 'eae685212778405d9b264bb36ed92801';
 
-export async function getStaticProps({ params: { slug } }) {
-  // Get all posts again
-  const posts = await getAllPosts();
+export default function NotionPage() {
+  const [blockMap, setBlockMap] = useState(null);
 
-  // Find the current blogpost by slug
-  const post = posts.find((t) => t.slug === slug);
+  useEffect(() => {
+    fetch(`https://notion-api.splitbee.io/v1/page/${NOTION_PAGE_ID}`)
+      .then(res => res.json())
+      .then(data => setBlockMap(data))
+      .catch(error => console.error('Failed to fetch Notion data:', error));
+  }, []);
 
-  const blocks = await fetch(`https://notion-api.splitbee.io/v1/page/${post.id}`).then((res) => res.json());
-  
-  return {
-    props: {
-     blocks,
-     post,
-    },
-  };
+  if (!blockMap) {
+    return <p>Loading...</p>;
+  }
+
+  return (
+    <div className='parent' style={{ maxWidth: 768 }}>
+      <NotionRenderer blockMap={blockMap} />
+    </div>
+  );
 }
 
-export default ({ post, blocks }) => (
-  <div style={{ maxWidth: 768 }}>
-    <h1>{post.title}</h1>
-    <NotionRenderer blockMap={blocks} />
-  </div>
-);
-
-export async function getStaticPaths() {
-    const posts = await getAllPosts();
-    return {
-      paths: posts.map((row) => `/${row.slug}`),
-      fallback: true,
-    };
-  }

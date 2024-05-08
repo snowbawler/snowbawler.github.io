@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { NotionRenderer } from 'react-notion';
 import "react-notion/src/styles.css";
 import "./pages.css"
+import banner from "../assets/bridgebillbanner.png";
 
 const NOTION_PAGE_ID = 'eae685212778405d9b264bb36ed92801';
 
@@ -20,9 +21,13 @@ export default function NotionPage() {
   }
 
   return (
-    <div className='parent' style={{ maxWidth: 768 }}>
-      <NotionRenderer blockMap={blockMap} />
-    </div>
+     <> 
+      <img src={banner} alt="BridgeBill Banner" style={{maxWidth: '100vw', width: '100vw'}}></img>
+      <h1 className='notion-title notion parent'>BridgeBill</h1>
+      <div className='parent' style={{ maxWidth: 768 }}>
+        <NotionRenderer blockMap={blockMap} />
+      </div>
+    </>
   );
 }
 

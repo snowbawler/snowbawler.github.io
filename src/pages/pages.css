@@ -5,6 +5,10 @@
     "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+.crag {
+  background-color: white;
+}
+
 .sub {
   color: gray;
   font-size: 13px;

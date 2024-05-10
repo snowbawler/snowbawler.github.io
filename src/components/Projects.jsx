@@ -42,7 +42,7 @@ export default function Projects() {
 
   return (
     <div className='container'>
-      <div className='title'>...and i make projects</div>
+      <div className='title'>...and I make projects</div>
       <div className="card_container">
         {posts.map((post) => (
           <CardHelper

@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './Scroll.css'
 import LottieScrollTrigger from "./helper/lottieScrollTrigger";
-import lottieJson from "../assets/procworld.json"
+import lottieJson from "../assets/world.json"
 
 
 gsap.registerPlugin(ScrollTrigger)

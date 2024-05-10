@@ -13,3 +13,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
   window.addEventListener('scroll', handleScroll);
 });
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  let elements = document.getElementsByTagName('lottie-player');
+
+  for (var i = 0; i < elements.length; i++) {
+  
+    elements[i].addEventListener('play', (event) => {
+      // console.log(event.target.shadowRoot.querySelector('svg').style.transform);
+      event.target.shadowRoot.querySelector('svg').style.transform = '';
+    });
+    elements[i].play(); // trigger (again)
+
+  }
+});

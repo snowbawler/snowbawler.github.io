@@ -8,15 +8,11 @@ import imageB from '../assets/muckcardimg.png'
 import imageC from '../assets/bridgecover.png'
 import resumePDF from '../assets/Su_Donne_Resume_F2026.pdf'
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useNotionCollection } from '../hooks/useNotionCollection';
 
 
 const NOTION_BLOG_ID = 'e75ae1c09cb347af9a12219825125a12';
-
-export const getAllPosts = async () => {
-    const response = await fetch(`https://notion-api.splitbee.io/v1/table/${NOTION_BLOG_ID}`);
-    return await response.json();
-};
 
 const imageMap = {
   "imageA": imageA,
@@ -25,26 +21,19 @@ const imageMap = {
 };
 
 export default function Projects() {
-
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    getAllPosts().then(data => {
-      setPosts(data);
-      console.log(data);
-    });
-  }, []);
-
-  const descriptionA = 'Simulation and Validation'
-  const titleA = 'Longhorn Racing'
-  const descriptionB = '2D Platformer'
-  const titleB = 'Muck'
+  const { rows: posts, isLoading, error } = useNotionCollection(NOTION_BLOG_ID);
 
   return (
     <div className='container'>
       <div className='title'>...and I make projects</div>
       <div className="card_container">
-        {posts.map((post) => (
+        {isLoading && <p className='card_loading'>Loading projects...</p>}
+        {error && (
+          <p className='card_error' role='alert'>
+            Failed to load projects. Please try again later.
+          </p>
+        )}
+        {!isLoading && !error && posts.map((post) => (
           <CardHelper
             key={post.slug}
             description = {post.description}

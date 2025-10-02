@@ -1,25 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { NotionRenderer } from 'react-notion';
-import "react-notion/src/styles.css";
+import React from 'react';
 import "./pages.css"
 import banner from "../assets/bridgebillbanner.png";
 import { Link } from "react-router-dom"
+import { useNotionRecordMap } from "../hooks/useNotionRecordMap";
+import NotionContent from "../components/notion/NotionContent";
 
 const NOTION_PAGE_ID = 'eae685212778405d9b264bb36ed92801';
 
 export default function NotionPage() {
-  const [blockMap, setBlockMap] = useState(null);
-
-  useEffect(() => {
-    fetch(`https://notion-api.splitbee.io/v1/page/${NOTION_PAGE_ID}`)
-      .then(res => res.json())
-      .then(data => setBlockMap(data))
-      .catch(error => console.error('Failed to fetch Notion data:', error));
-  }, []);
-
-  if (!blockMap) {
-    return <p>Loading...</p>;
-  }
+  const { recordMap, isLoading, error } = useNotionRecordMap(NOTION_PAGE_ID);
 
   return (
      <> 
@@ -28,9 +17,10 @@ export default function NotionPage() {
       <img src={banner} alt="BridgeBill Banner" style={{maxWidth: '100vw', width: '100vw'}}></img>
       <h1 className='notion-title notion parent'>BridgeBill</h1>
       <div className='parent' style={{ maxWidth: 768 }}>
-        <NotionRenderer blockMap={blockMap} />
+        {isLoading && <p>Loading...</p>}
+        {error && <p role="alert">Failed to load content. Please refresh.</p>}
+        {recordMap && !error && <NotionContent recordMap={recordMap} />}
       </div>
     </>
   );
 }
-

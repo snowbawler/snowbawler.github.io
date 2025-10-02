@@ -1,25 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { NotionRenderer } from 'react-notion';
-import "react-notion/src/styles.css";
+import React from 'react';
 import "./pages.css"
 import banner from "../assets/cragbanner.png";
 import { Link } from "react-router-dom"
+import { useNotionRecordMap } from "../hooks/useNotionRecordMap";
+import NotionContent from "../components/notion/NotionContent";
 
 const NOTION_PAGE_ID = '47e7ee996c284d54a4913cdd62ffdfe3';
 
 export default function NotionPage() {
-  const [blockMap, setBlockMap] = useState(null);
-
-  useEffect(() => {
-    fetch(`https://notion-api.splitbee.io/v1/page/${NOTION_PAGE_ID}`)
-      .then(res => res.json())
-      .then(data => setBlockMap(data))
-      .catch(error => console.error('Failed to fetch Notion data:', error));
-  }, []);
-
-  if (!blockMap) {
-    return <p>Loading...</p>;
-  }
+  const { recordMap, isLoading, error } = useNotionRecordMap(NOTION_PAGE_ID);
 
   return (
      <div className='crag'> 
@@ -27,7 +16,9 @@ export default function NotionPage() {
       <img src={banner} alt="Crags Banner" style={{top: "-2vw", left: "-2vw", maxWidth: '102vw', width: '102vw'}}></img>
       <div className='parent' style={{ maxWidth: 768 }}>
         <h1 className='notion-title '>Longhorn Racing Projects</h1>
-        <NotionRenderer blockMap={blockMap} />
+        {isLoading && <p>Loading...</p>}
+        {error && <p role="alert">Failed to load content. Please refresh.</p>}
+        {recordMap && !error && <NotionContent recordMap={recordMap} />}
       </div>
     </div>
   );

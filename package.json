@@ -19,9 +19,11 @@
     "gsap": "^3.12.3",
     "lottie-react": "^2.4.0",
     "notion-api-worker": "^0.1.0",
+    "katex": "^0.16.9",
+    "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-notion": "^0.10.0",
+    "react-notion-x": "^7.6.0",
     "react-player": "^2.14.1",
     "react-router-dom": "^6.21.0"
   },

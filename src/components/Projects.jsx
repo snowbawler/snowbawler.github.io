@@ -6,7 +6,7 @@ import linkedin from '../assets/LI-In-Bug.png'
 import imageA from '../assets/craghero.png'
 import imageB from '../assets/muckcardimg.png'
 import imageC from '../assets/bridgecover.png'
-import resumePDF from '../assets/resume.pdf'
+import resumePDF from '../assets/Su_Donne_Resume_F2026.pdf'
 
 import React, { useEffect, useState } from 'react';
 
@@ -35,8 +35,8 @@ export default function Projects() {
     });
   }, []);
 
-  const descriptionA = 'Texas Rock Climbing Member App'
-  const titleA = 'Crags'
+  const descriptionA = 'Simulation and Validation'
+  const titleA = 'Longhorn Racing'
   const descriptionB = '2D Platformer'
   const titleB = 'Muck'
 

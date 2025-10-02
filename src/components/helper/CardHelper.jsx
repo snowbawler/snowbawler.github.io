@@ -6,13 +6,13 @@ const CardHelper = (props) => {
 
     return (
         <article className="card_article">
-            <Link preventScrollReset={true} to={link}>
+            <Link to={link}>
                 <img className='card_img' src={image} alt="" />
             </Link>
             <div className="card_data">
                 <span className="card_description">{description}</span>
                 <h2 className="card_title">{title}</h2>
-                <Link preventScrollReset={true} to={link} className='card_button'>Read More</Link>
+                <Link to={link} className='card_button'>Read More</Link>
             </div>
         </article>
     )

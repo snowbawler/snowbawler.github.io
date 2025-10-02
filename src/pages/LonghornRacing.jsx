@@ -23,10 +23,10 @@ export default function NotionPage() {
 
   return (
      <div className='crag'> 
-      <Link to="/" style={{position: "absolute", top: "20px", left: "20px", padding: "10px 15px", background: "#F26E00", color: "#fff",  textDecoration: "none", borderRadius: "5px",  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", fontSize: "16px",}}>Back</Link>
-      <img src={banner} alt="Crags Banner" style={{maxWidth: '100vw', width: '100vw'}}></img>
-      <h1 className='notion-title notion parent'>Crags</h1>
+      <Link to="/" style={{position: "absolute", top: "20px", left: "20px", padding: "10px 15px", background: "#D6CEC8", color: "#000",  textDecoration: "none", borderRadius: "5px",  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", fontSize: "16px",}}>Back</Link>
+      <img src={banner} alt="Crags Banner" style={{top: "-2vw", left: "-2vw", maxWidth: '102vw', width: '102vw'}}></img>
       <div className='parent' style={{ maxWidth: 768 }}>
+        <h1 className='notion-title '>Longhorn Racing Projects</h1>
         <NotionRenderer blockMap={blockMap} />
       </div>
     </div>

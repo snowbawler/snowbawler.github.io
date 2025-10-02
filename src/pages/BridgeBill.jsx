@@ -15,7 +15,6 @@ export default function NotionPage() {
       <Link to="/" style={{position: "absolute", top: "20px", left: "20px", padding: "10px 15px", background: "#8BB7BA", color: "#fff",  textDecoration: "none", borderRadius: "5px",  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", fontSize: "16px",}}>Back</Link>
 
       <img src={banner} alt="BridgeBill Banner" style={{maxWidth: '100vw', width: '100vw'}}></img>
-      <h1 className='notion-title notion parent'>BridgeBill</h1>
       <div className='parent' style={{ maxWidth: 768 }}>
         {isLoading && <p>Loading...</p>}
         {error && <p role="alert">Failed to load content. Please refresh.</p>}

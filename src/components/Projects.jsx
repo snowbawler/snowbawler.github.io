@@ -5,7 +5,7 @@ import resume from '../assets/resume.svg'
 import linkedin from '../assets/LI-In-Bug.png'
 import imageA from '../assets/craghero.png'
 import imageB from '../assets/muckcardimg.png'
-import imageC from '../assets/bridgecover.png'
+import imageC from '../assets/codeassisthero.png'
 import resumePDF from '../assets/Su_Donne_Resume_F2026.pdf'
 
 import React from 'react';

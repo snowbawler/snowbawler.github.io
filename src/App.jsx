@@ -5,7 +5,8 @@ import './App.css'
 import Home from "./pages/Home";
 // import Crags from "./pages/Crags";
 import Muck from "./pages/Muck";
-import BridgeBill from "./pages/BridgeBill";
+// import BridgeBill from "./pages/BridgeBill";
+import CodeAssist from "./pages/CodeAssist";
 import LonghornRacing from "./pages/LonghornRacing";
 
 
@@ -23,7 +24,8 @@ function App() {
                 
                     <Route path='/LonghornRacing' element={<LonghornRacing/>}/>
                     <Route path='/Muck' element={<Muck/>}/>
-                    <Route path='/BridgeBill' element={<BridgeBill/>}/>
+                    {/* <Route path='/BridgeBill' element={<BridgeBill/>}/> */}
+                    <Route path='/CodeAssist' element={<CodeAssist/>}/>
                     <Route path='*' element={<Home/>} />
                 </Routes>
             </AnimatePresence>

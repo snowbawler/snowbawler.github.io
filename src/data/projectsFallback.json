@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "/LonghornRacing",
+    "title": "Longhorn Racing",
+    "description": "Simulation and Validation",
+    "image": "imageA"
+  },
+  {
+    "slug": "/CodeAssist",
+    "title": "CodeAssist",
+    "description": "LLM-Powered Grading Feedback",
+    "image": "imageC"
+  },
+  {
+    "slug": "/Muck",
+    "title": "Muck",
+    "description": "Texas Game Jam 2023",
+    "image": "imageB"
+  }
+]

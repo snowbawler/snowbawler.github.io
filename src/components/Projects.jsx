@@ -10,6 +10,7 @@ import resumePDF from '../assets/Su_Donne_Resume_F2026.pdf'
 
 import React from 'react';
 import { useNotionCollection } from '../hooks/useNotionCollection';
+import fallbackProjects from '../data/projectsFallback.json';
 
 
 const NOTION_BLOG_ID = 'e75ae1c09cb347af9a12219825125a12';
@@ -22,18 +23,22 @@ const imageMap = {
 
 export default function Projects() {
   const { rows: posts, isLoading, error } = useNotionCollection(NOTION_BLOG_ID);
+  const remotePosts = Array.isArray(posts) ? posts : [];
+  const shouldUseFallback = Boolean(error);
+  const displayedPosts = shouldUseFallback ? fallbackProjects : remotePosts;
+  const showEmptyState = !isLoading && !shouldUseFallback && remotePosts.length === 0;
 
   return (
     <div className='container'>
       <div className='title'>...and I make projects</div>
       <div className="card_container">
         {isLoading && <p className='card_loading'>Loading projects...</p>}
-        {error && (
-          <p className='card_error' role='alert'>
+        {showEmptyState && (
+          <p className='card_error' role='status'>
             Failed to load projects. Please try again later.
           </p>
         )}
-        {!isLoading && !error && posts.map((post) => (
+        {!isLoading && displayedPosts.map((post) => (
           <CardHelper
             key={post.slug}
             description = {post.description}

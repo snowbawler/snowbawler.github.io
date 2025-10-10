@@ -33,7 +33,6 @@ export default function NotionPage() {
  
       <img src={banner} alt="Crags Banner" style={{top: "-2vw", left: "-2vw", maxWidth: '102vw', width: '102vw'}}></img>
       <div className='parent' style={{ maxWidth: 768 }}>
-        {isLoading && <p>Loading...</p>}
         {error && <p role="alert">Failed to load content. Please refresh.</p>}
         {recordMap && !error && <NotionContent recordMap={recordMap} />}
       </div>

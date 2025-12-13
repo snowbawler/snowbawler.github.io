@@ -6,6 +6,7 @@ import linkedin from '../assets/LI-In-Bug.png'
 import imageA from '../assets/craghero.png'
 import imageB from '../assets/muckcardimg.png'
 import imageC from '../assets/codeassisthero.png'
+import imageD from '../assets/ecocarcard.png'
 import resumePDF from '../assets/Su_Donne_Resume_F2026.pdf'
 
 import React from 'react';
@@ -18,7 +19,8 @@ const NOTION_BLOG_ID = 'e75ae1c09cb347af9a12219825125a12';
 const imageMap = {
   "imageA": imageA,
   "imageB": imageB,
-  "imageC": imageC
+  "imageC": imageC,
+  "imageD": imageD,
 };
 
 export default function Projects() {

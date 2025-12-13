@@ -12,6 +12,12 @@
     "image": "imageC"
   },
   {
+    "slug": "/EcoCAR",
+    "title": "EcoCAR",
+    "description": "Perception Autonomous Driving",
+    "image": "imageD"
+  },
+  {
     "slug": "/Muck",
     "title": "Muck",
     "description": "Texas Game Jam 2023",

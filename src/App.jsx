@@ -8,6 +8,7 @@ import Muck from "./pages/Muck";
 // import BridgeBill from "./pages/BridgeBill";
 import CodeAssist from "./pages/CodeAssist";
 import LonghornRacing from "./pages/LonghornRacing";
+import EcoCAR from "./pages/EcoCAR";
 
 
 import { AnimatePresence } from "framer-motion";
@@ -19,18 +20,19 @@ function App() {
         <>
             <AnimatePresence mode='wait'>
                 <Routes location={location} key={location.pathname}>
-                    <Route index element={<Home/>} />
+                    <Route index element={<Home />} />
                     {/* <Route path='/Crags' element={<Crags/>}/> */}
-                
-                    <Route path='/LonghornRacing' element={<LonghornRacing/>}/>
-                    <Route path='/Muck' element={<Muck/>}/>
+
+                    <Route path='/EcoCAR' element={<EcoCAR />} />
+                    <Route path='/LonghornRacing' element={<LonghornRacing />} />
+                    <Route path='/Muck' element={<Muck />} />
                     {/* <Route path='/BridgeBill' element={<BridgeBill/>}/> */}
-                    <Route path='/CodeAssist' element={<CodeAssist/>}/>
-                    <Route path='*' element={<Home/>} />
+                    <Route path='/CodeAssist' element={<CodeAssist />} />
+                    <Route path='*' element={<Home />} />
                 </Routes>
             </AnimatePresence>
         </>
     );
 }
- 
+
 export default App;

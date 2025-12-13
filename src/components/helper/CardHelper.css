@@ -189,15 +189,22 @@ img {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 3vw;
     row-gap: 3vh;
+    justify-items: center;
+  }
+
+  .card_article {
+    width: 100%;
   }
 
   .card_img {
-    height: 24vh;
-    width: 24vh;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 
   .card_data {
-    width: 22vh;
+    width: calc(100% - 1rem);
+    max-width: 90%;
     padding: 0.5rem;
     box-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.15);
   }

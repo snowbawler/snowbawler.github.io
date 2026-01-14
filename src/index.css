@@ -1,3 +1,41 @@
 .pin-spacer {
   pointer-events: none;
 }
+
+.scroll-hint {
+  position: fixed;
+  left: 50%;
+  bottom: 8vh;
+  z-index: 999;
+  transform: translateX(-50%);
+  padding: 0.4rem 0.8rem;
+  color: #fff;
+  font-family: 'p22-nudgewink-pro', sans-serif;
+
+  font-size: 2.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  pointer-events: none;
+  opacity: 0;
+  animation: scroll-hint-fade 0.5s ease-out forwards,
+    scroll-hint-float 1.6s ease-in-out infinite 0.5s;
+}
+
+@keyframes scroll-hint-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scroll-hint-float {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -8px);
+  }
+}
